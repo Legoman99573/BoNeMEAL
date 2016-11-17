@@ -8,9 +8,14 @@ Allow from all
     RewriteEngine On
 
     # Important: RewriteBase
-    # If you installed the web app on a subsite, you have to set this to the URL (not the file path!) of the subsite.
-    # Note: No trailing slash! (e.g. /BoNeMEAL or /mc-server/ban-management)
-    RewriteBase /bans/index.php
+    # If you installed the web app on a subsite, you have to set this to the URL of the subsite.
+    # Note: must be in this format to prevent any issues from occurring due to index.php not being on the RewriteBase (e.g. /BoNeMEAL/index.php or /mc-server/ban-management/index.php)
+
+    # Enable this if you are not sure (recommended)
+    # RewriteBase /bans/index.php
+
+    # only enable this if your host knows it's index.php. Must put a # to disable the other option. Failing to do so could cause a 500 Server Error to occur.
+    # RewriteBase /bans/
 
     # Redirect Trailing Slashes...
     RewriteRule ^(.*)/$ /$1 [L,R=301]

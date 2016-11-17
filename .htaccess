@@ -15,7 +15,7 @@ Allow from all
     # RewriteBase /bans/index.php
 
     # only enable this if your host knows it's index.php. Must put a # to disable the other option. Failing to do so could cause a 500 Server Error to occur.
-    # RewriteBase /bans/
+    # RewriteBase /bans
 
     # Redirect Trailing Slashes...
     RewriteRule ^(.*)/$ /$1 [L,R=301]

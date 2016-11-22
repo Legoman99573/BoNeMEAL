@@ -12,7 +12,7 @@ Allow from all
     # Note: must be in this format to prevent any issues from occurring due to index.php not being on the RewriteBase (e.g. /BoNeMEAL/index.php or /mc-server/ban-management/index.php)
 
     # Enable this if you are not sure (recommended)
-    # RewriteBase /bans/index.php
+     RewriteBase /bans/index.php
 
     # only enable this if your host knows it's index.php. Must put a # to disable the other option. Failing to do so could cause a 500 Server Error to occur.
     # RewriteBase /bans
